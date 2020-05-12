@@ -6,14 +6,14 @@ import org.puc.rio.inf1636.hglm.war.model.Player;
 
 public class WarLogic {
 
-	public final static int MAX_PLAYERS = 6;
-	public final static int MIN_PLAYERS = 3;
-	public final static int MAX_DICE = 3;
-	public final static int ARMIES_TO_GAIN_FROM_TERRITORY_CARD = 2;
-	public final static int MINIMUM_ARMIES_TO_GAIN_PER_TURN = 3;
-	public final static int CARD_EXCHANGE_ARMY_INCREMENT= 2;
+	public final static int MAX_PLAYERS = 6; // UiPanel
+	public final static int MIN_PLAYERS = 3; // UiPanel
+	public final static int MAX_DICE = 3; // territory
+	public final static int ARMIES_TO_GAIN_FROM_TERRITORY_CARD = 2; //territory
+	public final static int MINIMUM_ARMIES_TO_GAIN_PER_TURN = 3; // territory
+	public final static int CARD_EXCHANGE_ARMY_INCREMENT= 2; // territory
 
-	public static int calculateArmiesToGain(Map m, Player p) {
+	public static int calculateArmiesToGain(Map m, Player p) { // passar para model territory
 		int countFromTotalTerritories = m.getTerritoriesByOwner(p).size() / 2;
 		int countFromContinentsOwned = 0;
 
